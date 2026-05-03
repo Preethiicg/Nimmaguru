@@ -1,0 +1,11 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView android:text="🌟 Wall of Appreciation" android:textStyle="bold" android:textSize="24sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/etStudentName" android:hint="Your Name" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/etMessage" android:hint="Write a thank you note for your Guru" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <Button android:id="@+id/btnPost" android:text="Post Thank You" android:textSize="18sp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvThanks" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+</LinearLayout>
