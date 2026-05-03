@@ -1,0 +1,5 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.chip.ChipGroup android:id="@+id/chipGroupSkills" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/etLocationFilter" android:hint="Location filter" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvGurus" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</LinearLayout>
