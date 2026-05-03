@@ -4,12 +4,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
-    android:background="@color/surface">
+    android:background="@drawable/bg_gradient">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to Nimma-Guru"
+        android:text="👩‍🏫👨‍🎓 Welcome to Nimma-Guru"
         android:textStyle="bold"
         android:textSize="24sp"
         android:textColor="@color/onSurface"/>
