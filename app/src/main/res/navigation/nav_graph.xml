@@ -1,0 +1,9 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment android:id="@+id/homeFragment" android:name="com.nimmaguru.ui.main.fragments.HomeFragment" android:label="Calendar"/>
+    <fragment android:id="@+id/searchFragment" android:name="com.nimmaguru.ui.main.fragments.SearchFragment" android:label="Search"/>
+    <fragment android:id="@+id/profileFragment" android:name="com.nimmaguru.ui.main.fragments.ProfileFragment" android:label="Profile"/>
+    <fragment android:id="@+id/appreciationFragment" android:name="com.nimmaguru.ui.main.fragments.AppreciationFragment" android:label="Wall"/>
+</navigation>
