@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bg_gradient"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView android:text="🌟 Wall of Appreciation" android:textStyle="bold" android:textSize="24sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+    <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" app:cardCornerRadius="14dp" app:cardElevation="2dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp">
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Your Name" app:boxBackgroundMode="outline">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etStudentName" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:hint="Write a thank you note for your Guru" app:boxBackgroundMode="outline">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etMessage" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnPost" android:text="Post Thank You" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" app:cornerRadius="14dp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvThanks" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:layout_marginTop="12dp"/>
+</LinearLayout>
