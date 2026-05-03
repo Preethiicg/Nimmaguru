@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@drawable/bg_gradient">
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Choose Your Role ✨" android:textStyle="bold" android:textSize="24sp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Let's personalize your app experience" android:layout_marginTop="8dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGuru"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="I am Guru"
+        app:icon="@android:drawable/ic_menu_my_calendar"
+        app:cornerRadius="16dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStudent"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="I am Student"
+        app:icon="@android:drawable/ic_menu_search"
+        app:cornerRadius="16dp"/>
+</LinearLayout>

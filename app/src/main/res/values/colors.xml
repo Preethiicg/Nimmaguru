@@ -1,0 +1,11 @@
+<resources>
+    <color name="primary">#7E57C2</color>
+    <color name="onPrimary">#FFFFFF</color>
+    <color name="primaryContainer">#EDE1FF</color>
+    <color name="onPrimaryContainer">#2E1A47</color>
+    <color name="secondary">#BA68C8</color>
+    <color name="surface">#FAF7FF</color>
+    <color name="surfaceVariant">#F0E8FF</color>
+    <color name="onSurface">#2A2333</color>
+    <color name="outline">#B9A8D4</color>
+</resources>
