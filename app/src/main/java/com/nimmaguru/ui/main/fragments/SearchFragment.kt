@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 import com.nimmaguru.R
+import com.nimmaguru.data.model.Guru
 import com.nimmaguru.ui.main.adapters.GuruAdapter
 import com.nimmaguru.viewmodel.MainViewModel
 
@@ -21,11 +22,17 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
         val location = view.findViewById<EditText>(R.id.etLocationFilter)
         val rv = view.findViewById<RecyclerView>(R.id.rvGurus)
         val adapter = GuruAdapter(emptyList()); rv.layoutManager = LinearLayoutManager(requireContext()); rv.adapter = adapter
-        vm.loadGurus(); vm.gurus.observe(viewLifecycleOwner) { all ->
+        vm.loadGurus(); vm.gurus.observe(viewLifecycleOwner) { dbList ->
+            val all = if (dbList.isEmpty()) sampleGurus() else dbList
             val skill = chipGroup.checkedChipId.takeIf { it != View.NO_ID }?.let { view.findViewById<Chip>(it).text.toString() }
             val filtered = all.filter { g -> (skill == null || g.skills.contains(skill)) && g.location.contains(location.text.toString(), true) }
             adapter.update(filtered)
         }
         chipGroup.setOnCheckedStateChangeListener { _, _ -> vm.gurus.value?.let { vm.gurus.postValue(it) } }
     }
+
+    private fun sampleGurus(): List<Guru> = listOf(
+        Guru(id = "demo1", name = "Shankar Rao", skills = listOf("Math", "Science"), availability = "Sat 4:00 PM - 6:00 PM", location = "Mandya", bio = "Retired high school teacher"),
+        Guru(id = "demo2", name = "Meera Tai", skills = listOf("Carpentry"), availability = "Sun 9:00 AM - 11:00 AM", location = "Mysuru", bio = "Skilled craft mentor")
+    )
 }

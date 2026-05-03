@@ -14,10 +14,10 @@ class GuruAdapter(private var items: List<Guru>) : RecyclerView.Adapter<GuruAdap
     override fun getItemCount() = items.size
     override fun onBindViewHolder(h: VH, i: Int) {
         val g = items[i]
-        h.itemView.findViewById<TextView>(R.id.tvName).text = g.name
-        h.itemView.findViewById<TextView>(R.id.tvSkills).text = g.skills.joinToString()
-        h.itemView.findViewById<TextView>(R.id.tvAvailability).text = g.availability
-        h.itemView.findViewById<TextView>(R.id.tvLocation).text = g.location
+        h.itemView.findViewById<TextView>(R.id.tvName).text = "👨‍🏫 ${g.name}"
+        h.itemView.findViewById<TextView>(R.id.tvSkills).text = "Skills: ${g.skills.joinToString()}"
+        h.itemView.findViewById<TextView>(R.id.tvAvailability).text = "Available: ${g.availability}"
+        h.itemView.findViewById<TextView>(R.id.tvLocation).text = "Location: ${g.location}"
     }
     fun update(newItems: List<Guru>) { items = newItems; notifyDataSetChanged() }
 }
