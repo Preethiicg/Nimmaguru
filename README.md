@@ -213,7 +213,13 @@ Before uploading:
 - Include screenshots and demo video if available
 
 ---
+# Screenshots
+
+| Home | Guru Profile | Appreciation |
+|---|---|---|
+| ![Home](screenshots/home.jpeg) | ![Guru Profile](screenshots/Guru_profile.png) | ![Appreciation](screenshots/appereciation.png) |
 
 # Author
 
 **Preethi C G**
+**4SN22AI050**
